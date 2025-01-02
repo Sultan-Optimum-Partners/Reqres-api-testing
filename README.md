@@ -94,5 +94,3 @@ The `BASE_URL` environment variable is required for the tests to run. It is secu
 3. Check the test results under the **Actions** tab in your repository.
 4. Download the test report artifact if needed for further analysis.
 
----
-
