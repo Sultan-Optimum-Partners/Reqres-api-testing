@@ -17,7 +17,6 @@ This project contains automated tests for the [Reqres API](https://reqres.in/) u
 Ensure the following are installed on your local machine:
 - [Node.js](https://nodejs.org/) (LTS version recommended)
 - [npm](https://www.npmjs.com/) (comes with Node.js)
-- [Docker](https://www.docker.com/) (optional for containerized environments)
 
 ---
 
@@ -25,7 +24,7 @@ Ensure the following are installed on your local machine:
 
 1. Clone the repository:
    ```bash
-   git clone [<repository-url>](https://github.com/Sultan-Optimum-Partners/Reqres-api-testing
+   git clone https://github.com/Sultan-Optimum-Partners/Reqres-api-testing
    cd Reqres-api-testing
    ```
 
