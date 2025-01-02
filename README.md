@@ -9,6 +9,7 @@ This project contains automated tests for the [Reqres API](https://reqres.in/) u
 - Configured to run tests locally and in GitHub Actions.
 - Utilizes environment variables for secure configuration.
 - Includes GitHub Actions workflow for continuous integration.
+- Dockerized setup for running tests in a containerized environment.
 
 ---
 
@@ -17,6 +18,7 @@ This project contains automated tests for the [Reqres API](https://reqres.in/) u
 Ensure the following are installed on your local machine:
 - [Node.js](https://nodejs.org/) (LTS version recommended)
 - [npm](https://www.npmjs.com/) (comes with Node.js)
+- [Docker](https://www.docker.com/) (for running tests in a container)
 
 ---
 
@@ -42,6 +44,38 @@ Ensure the following are installed on your local machine:
    ```bash
    npx playwright test
    ```
+
+---
+
+## Docker Configuration
+
+The project includes a `Dockerfile` to build a containerized environment for running the tests. This ensures consistency across different environments.
+
+### Building the Docker Image
+```bash
+docker build -t playwright-tests .
+```
+
+### Running the Docker Container
+Run the tests inside the container:
+```bash
+docker run --rm playwright-tests
+```
+
+Override environment variables (optional):
+```bash
+docker run --rm -e BASE_URL=https://reqres.in playwright-tests
+```
+
+Save test reports locally:
+```bash
+docker run --rm -v $(pwd)/playwright-report:/usr/src/app/playwright-report playwright-tests
+```
+
+Debug inside the container (optional):
+```bash
+docker run --rm -it playwright-tests bash
+```
 
 ---
 
@@ -75,4 +109,5 @@ The `BASE_URL` environment variable is required for the tests to run. It is secu
 3. Check the test results under the **Actions** tab in your repository.
 4. Download the test report artifact if needed for further analysis.
 
+---
 
