@@ -62,21 +62,6 @@ Run the tests inside the container:
 docker run --rm playwright-tests
 ```
 
-Override environment variables (optional):
-```bash
-docker run --rm -e BASE_URL=https://reqres.in playwright-tests
-```
-
-Save test reports locally:
-```bash
-docker run --rm -v $(pwd)/playwright-report:/usr/src/app/playwright-report playwright-tests
-```
-
-Debug inside the container (optional):
-```bash
-docker run --rm -it playwright-tests bash
-```
-
 ---
 
 ## GitHub Actions Configuration
